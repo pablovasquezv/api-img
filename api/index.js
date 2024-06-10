@@ -19,7 +19,8 @@ app.get("/api/imagenes", (req, res) => {
       //   res.send(breeds.find((b) => b.name === breed)) . //old impleentation
       res.send(search.search(breed))
     }
-    res.send(breeds.map((b) => ({ name: b })))
+    //res.send(breeds.map((b) => ({ name: b })))
+    res.send(breeds)
   } catch (error) {
     console.log("error", error)
   }
